@@ -1,68 +1,90 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+/* Global Styles */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main Container */
+.container {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 1000px;
+  background-color: #f0f0f0;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Inner Container for Each Calculator */
+.inner-container {
+  border: 2px solid black;
+  padding: 20px;
+  width: 45%;
+  min-width: 300px;
+  background-color: #f0f0f0;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+/* Header */
+.header {
+  color: blue;
+  font-size: 24px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Input Sections */
+.sideA,
+.sideB,
+.sideC {
+  margin: 20px 0 0 0;
+  background-color: #282930;
+  border: 1px solid #666666;
+  color: #FFFFFF;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Buttons */
+.CalculateButton,
+.CalculateButton1,
+.CalculateButton2,
+.CalculateButton3,
+.CalculateButton4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  margin-top: 20px;
+  width: 100%;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.CalculateButton:hover,
+.CalculateButton1:hover,
+.CalculateButton2:hover,
+.CalculateButton3:hover,
+.CalculateButton4:hover {
+  background-color: #0056b3;
+}
+
+/* Answer Field */
+.answerField input,
+#answerPolynomial {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
 }

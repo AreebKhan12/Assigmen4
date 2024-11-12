@@ -1,42 +1,90 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Main Container */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 1000px;
+  background-color: #f0f0f0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Inner Container for Each Calculator */
+.inner-container {
+  border: 2px solid black;
+  padding: 20px;
+  width: 45%;
+  min-width: 300px;
+  background-color: #f0f0f0;
 }
 
-.card {
-  padding: 2em;
+/* Header */
+.header {
+  color: blue;
+  font-size: 24px;
+  text-align: left;
+  margin-bottom: 20px;
 }
 
-.read-the-docs {
-  color: #888;
+/* Input Sections */
+.sideA,
+.sideB,
+.sideC {
+  margin: 20px 0 0 0;
+  background-color: #282930;
+  border: 1px solid #666666;
+  color: #FFFFFF;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Buttons */
+.CalculateButton,
+.CalculateButton1,
+.CalculateButton2,
+.CalculateButton3,
+.CalculateButton4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.CalculateButton:hover,
+.CalculateButton1:hover,
+.CalculateButton2:hover,
+.CalculateButton3:hover,
+.CalculateButton4:hover {
+  background-color: #0056b3;
+}
+
+/* Answer Field */
+.answerField input,
+#answerPolynomial {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
 }
